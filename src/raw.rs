@@ -1,7 +1,9 @@
 #![allow(dead_code)]
 #![allow(non_camel_case_types)]
 
-use libc::{c_int, c_uint, c_char, c_uchar, c_ushort, sockaddr, timeval, FILE};
+use libc::{c_int, c_uint, c_char, c_uchar, c_ushort, timeval, FILE};
+#[cfg(windows)]
+use winapi::ws2def::SOCKADDR as sockaddr;
 
 #[repr(C)]
 #[derive(Copy, Clone)]

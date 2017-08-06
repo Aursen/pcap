@@ -51,6 +51,8 @@
 #![cfg_attr(feature = "clippy", allow(redundant_closure_call))]
 
 extern crate libc;
+#[cfg(windows)]
+extern crate winapi;
 #[cfg(feature = "tokio")]
 extern crate mio;
 #[cfg(feature = "tokio")]
